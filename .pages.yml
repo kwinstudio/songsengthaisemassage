@@ -1,0 +1,105 @@
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+  - name: site
+    label: Website
+    type: file
+    path: data/site.json
+    fields:
+      - { name: businessName, label: Bedrijfsnaam, type: string }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: heroEyebrow, label: Hero bovenregel, type: string }
+      - { name: heroTitle, label: Hero titel, type: string }
+      - { name: heroText, label: Hero tekst, type: text }
+      - { name: address, label: Adres, type: string }
+      - { name: phoneDisplay, label: Telefoon weergave, type: string }
+      - { name: phone, label: Telefoon link, type: string }
+      - { name: whatsapp, label: WhatsApp nummer, type: string }
+      - { name: email, label: E-mail, type: string }
+      - { name: kvk, label: KvK, type: string }
+      - { name: parking, label: Parkeren, type: string }
+      - { name: payment, label: Betaalmethode, type: string }
+      - { name: googleRating, label: Google score, type: string }
+      - { name: googleReviewCount, label: Aantal Google reviews, type: string }
+      - { name: facebookUrl, label: Facebook URL, type: string }
+      - { name: marktplaatsUrl, label: Marktplaats URL, type: string }
+      - { name: interiorImage, label: Salonfoto, type: image }
+      - { name: seoTitle, label: SEO titel, type: string }
+      - { name: metaDescription, label: Meta description, type: text }
+      - name: hours
+        label: Openingstijden
+        type: object
+        list: true
+        fields:
+          - { name: days, label: Dagen, type: string }
+          - { name: time, label: Tijd, type: string }
+
+  - name: treatments
+    label: Behandelingen & prijzen
+    type: file
+    path: data/treatments.json
+    fields:
+      - name: items
+        label: Behandelingen
+        type: object
+        list: true
+        fields:
+          - { name: id, label: ID, type: string }
+          - { name: name, label: Naam, type: string }
+          - { name: type, label: Type, type: string }
+          - { name: short, label: Korte omschrijving, type: text }
+          - { name: description, label: Uitgebreide omschrijving, type: text }
+          - { name: bestFor, label: Vooral geschikt voor, type: text }
+          - { name: intensity, label: Intensiteit, type: string }
+          - { name: oil, label: Olie / zonder olie, type: string }
+          - { name: active, label: Actief, type: boolean }
+          - name: prices
+            label: Prijzen
+            type: object
+            fields:
+              - name: solo
+                label: 1 persoon
+                type: object
+                fields:
+                  - { name: "30", label: 30 minuten, type: number }
+                  - { name: "60", label: 60 minuten, type: number }
+                  - { name: "90", label: 90 minuten, type: number }
+              - name: duo
+                label: Duo
+                type: object
+                fields:
+                  - { name: "30", label: 30 minuten, type: number }
+                  - { name: "60", label: 60 minuten, type: number }
+                  - { name: "90", label: 90 minuten, type: number }
+
+  - name: legal
+    label: Juridische teksten
+    type: file
+    path: data/legal.json
+    fields:
+      - name: terms
+        label: Algemene voorwaarden
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - { name: body, label: Tekst, type: text }
+      - name: privacy
+        label: Privacy & cookies
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - { name: body, label: Tekst, type: text }
+      - name: cancellation
+        label: Annuleren & afspraken
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - { name: body, label: Tekst, type: text }
+      - name: company
+        label: Bedrijfsgegevens
+        type: object
+        fields:
+          - { name: title, label: Titel, type: string }
+          - { name: body, label: Tekst, type: text }
