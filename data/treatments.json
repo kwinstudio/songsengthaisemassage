@@ -1,0 +1,26 @@
+[
+  {
+    "id":"relax",
+    "name":"Ontspanningsmassage",
+    "type":"Massage met olie",
+    "short":"Rustige massage om spanning los te laten en bewust tijd voor uzelf te nemen.",
+    "description":"Een massage gericht op ontspanning en een rustig gevoel. De behandeling wordt afgestemd op wat prettig voelt en kan over het hele lichaam worden uitgevoerd.",
+    "bestFor":"Voor wie vooral wil ontspannen, tot rust wil komen of een zachtere massagevoorkeur heeft.",
+    "intensity":"Zacht tot gemiddeld",
+    "oil":"Met olie",
+    "active":true,
+    "prices":{"solo":{"30":45,"60":70,"90":100},"duo":{"30":85,"60":130,"90":190}}
+  },
+  {
+    "id":"traditional",
+    "name":"Traditionele Thaise massage",
+    "type":"Traditionele techniek",
+    "short":"Een actievere Thaise massage met druk en beweging, zonder dat ontspanning uit het oog wordt verloren.",
+    "description":"Traditionele Thaise massage werkt met drukpunten en bewegingen vanuit de Thaise massagetraditie. De intensiteit wordt afgestemd op uw voorkeur.",
+    "bestFor":"Voor wie graag een actievere, stevigere behandeling ervaart of bewust voor traditionele Thaise technieken kiest.",
+    "intensity":"Gemiddeld tot stevig",
+    "oil":"Doorgaans zonder olie",
+    "active":true,
+    "prices":{"solo":{"30":45,"60":70,"90":100},"duo":{"30":85,"60":130,"90":190}}
+  }
+]
