@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7efe8">
+<title>Sophie is boosig</title>
+<meta name="description" content="Zeven keuzes. Een beetje chaos. Toch?">
+<meta property="og:title" content="Sophie is boosig">
+<meta property="og:description" content="Zeven keuzes. Een beetje chaos. Toch?">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#f7efe8;--ink:#302825;--muted:#81746b;--rose:#d96f7a;--rose2:#b44f5a;--soft:#fdecef;--line:#ead9cf;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100svh;background:radial-gradient(circle at 12% 3%,rgba(217,111,122,.18),transparent 26%),radial-gradient(circle at 90% 94%,rgba(229,182,138,.24),transparent 28%),var(--bg)}
+button,textarea{font:inherit}button{touch-action:manipulation}
+.page{width:min(430px,100%);min-height:100svh;margin:auto;padding:12px;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;padding:8px 2px 12px}
+.brand{border:0;background:none;color:var(--ink);font:800 20px Georgia,serif;display:flex;align-items:center;gap:8px}.dot{width:9px;height:9px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 5px rgba(217,111,122,.12)}
+.jol{border:1px solid var(--line);background:#ffffffd9;border-radius:999px;padding:8px 12px;font-weight:950;font-size:11px;box-shadow:0 7px 18px rgba(65,44,33,.08)}
+.stage{flex:1;display:flex;align-items:center;padding-bottom:12px;perspective:1000px}
+.card,.final{width:100%;border-radius:30px;box-shadow:0 26px 76px rgba(65,44,33,.16)}
+.card{background:#fffdf9e8;border:1px solid #fff;padding:20px 17px;backdrop-filter:blur(16px)}
+.enter{animation:enter .35s var(--ease)}@keyframes enter{from{opacity:.35;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+.shake{animation:shake .38s ease}@keyframes shake{25%{transform:translateX(-7px) rotate(-.5deg)}50%{transform:translateX(7px) rotate(.5deg)}75%{transform:translateX(-4px)}}
+.collage{height:285px;position:relative;margin:0 auto 16px;transform-style:preserve-3d;transition:transform .16s ease-out}
+.photo{position:absolute;object-fit:cover;border:4px solid #fff;border-radius:25px;box-shadow:0 18px 44px rgba(65,44,33,.22)}.a{left:4%;top:33px;width:47%;height:220px;transform:rotate(-7deg) translateZ(18px)}.b{right:4%;top:2px;width:47%;height:236px;transform:rotate(6deg) translateZ(38px)}
+.sticker{position:absolute;z-index:4;background:#fffffff2;color:var(--rose2);border:1px solid #e9c4c9;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:950;box-shadow:0 8px 20px rgba(65,44,33,.12)}.s1{left:4px;top:0;transform:rotate(-6deg)}.s2{right:3px;bottom:18px;transform:rotate(6deg)}
+.kicker{display:inline-flex;border-radius:999px;background:var(--soft);color:var(--rose2);padding:7px 10px;font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.085em}
+h1,h2{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.045em;text-wrap:balance}h1{margin:13px 0 11px;font-size:46px;line-height:.92}h1 em{color:var(--rose)}h2{margin:12px 0 18px;font-size:34px;line-height:1.02}
+.lead{margin:0;color:var(--muted);font-size:15px;line-height:1.62}.actions{display:grid;gap:9px;margin-top:18px}
+.primary,.secondary,.darkbtn,.wabtn,.reset{width:100%;border-radius:17px;padding:15px;font-weight:900;cursor:pointer}.primary{border:0;background:var(--ink);color:#fff;box-shadow:0 7px 0 #171311}.primary:active{transform:translateY(4px);box-shadow:0 3px 0 #171311}.secondary{border:1px solid var(--line);background:#fff;color:var(--ink)}
+.micro{margin:12px 0 0;text-align:center;color:#9b8d83;font-size:11px;line-height:1.45}
+.progressrow{display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:center;margin-bottom:16px;color:#80736b;font-size:11px;font-weight:900}.track{height:7px;border-radius:999px;overflow:hidden;background:#fff}.fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--rose),#f3a1aa);transition:width .4s var(--ease)}
+.qtop{display:flex;align-items:center;gap:11px}.thumbbtn{position:relative;border:0;padding:0;background:none}.thumb{width:68px;height:68px;display:block;object-fit:cover;border-radius:20px;border:4px solid #fff;box-shadow:0 10px 24px rgba(65,44,33,.16);transform:rotate(-2deg)}.thumbbtn i{position:absolute;right:-1px;bottom:1px;border-radius:999px;padding:2px 5px;background:#fff;font-style:normal;font-size:9px;font-weight:950}
+.vibe{color:#8b7d74;font-size:11px;line-height:1.42}.vibe b{display:block;color:var(--rose);text-transform:uppercase;letter-spacing:.1em;font-size:10px}.vibe small{display:block;margin-top:2px}
+.options{display:grid;gap:9px}.option{width:100%;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;text-align:left;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:16px;padding:12px}.option:active{transform:scale(.985)}.option.sel{border-color:#e18b94;background:#fdeef0;box-shadow:0 0 0 4px rgba(217,111,122,.08)}
+.key{width:30px;height:30px;display:grid;place-items:center;border:1px solid #cdbdb3;border-radius:50%;background:#fffaf7;font-size:11px;font-weight:950}.sel .key{color:#fff;border-color:var(--rose);background:var(--rose)}.tick{opacity:0}.sel .tick{opacity:1}
+textarea{width:100%;min-height:145px;resize:vertical;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:17px;padding:14px;outline:none;font-size:15px;line-height:1.5}textarea:focus{border-color:#e18b94;box-shadow:0 0 0 4px rgba(217,111,122,.08)}
+.nav{display:grid;grid-template-columns:.8fr 1.4fr;gap:9px;margin-top:16px}.objection{display:block;margin:12px auto 0;border:1px dashed #d8c7bd;background:none;color:#978981;border-radius:999px;padding:8px 10px;font-size:10px;font-weight:850}
+.final{position:relative;overflow:hidden;padding:21px 17px;background:#302825;color:#fff}.final h2{font-size:46px;line-height:.92}.final p{color:#d8cec8;font-size:14px;line-height:1.55}.final strong{color:#fff}.photos{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px;border:2px solid #ffffff29}.photos img:first-child{transform:rotate(-2deg)}.photos img:last-child{transform:rotate(2deg)}
+.summary{max-height:235px;overflow:auto;display:grid;gap:7px}.item{padding:10px 11px;border-radius:14px;background:#ffffff14}.item b{display:block;color:#f4aab2;font-size:9px;line-height:1.35;text-transform:uppercase;letter-spacing:.075em;margin-bottom:3px}.item span{font-size:13px;line-height:1.4}
+.darkbtn,.wabtn,.reset{border:0;margin-top:9px}.darkbtn{background:#fff;color:var(--ink)}.wabtn{background:#25d366;color:#073514}.reset{border:1px solid #ffffff2e;background:none;color:#ddd}
+.toast{position:fixed;z-index:90;left:50%;bottom:18px;transform:translateX(-50%);max-width:88vw;padding:10px 14px;border-radius:999px;background:var(--ink);color:#fff;text-align:center;font-size:11px;font-weight:900;box-shadow:0 12px 30px rgba(48,40,37,.25)}
+.float{position:fixed;z-index:85;pointer-events:none;font-size:22px;animation:fly 1s var(--ease) forwards}@keyframes fly{to{transform:translate(var(--x),var(--y)) rotate(160deg) scale(1.4);opacity:0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="page">
+<header><button class="brand" id="home"><span class="dot"></span>Sophie is boosig</button><button class="jol" id="jol">JOL</button></header>
+<section class="stage" id="stage"></section>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script>
+(function(){
+var P=[
+"https://ik.imagekit.io/magicpath/tr:h-4000,w-4000,c-at_max,f-jpeg/mcp-images/4aa16697-7533-4ef9-8410-6df6f677c064.jpg?ik-t=1790940811&ik-s=c5267019b4db1d3566476eff2839013611c0f0ba",
+"https://ik.imagekit.io/magicpath/tr:h-4000,w-4000,c-at_max,f-jpeg/mcp-images/11099333-dc32-466c-ad5f-57910f27d822.jpg?ik-t=1790940819&ik-s=e559a6b572084ea6a9b52d7529e810bfe9ce9e72"];
+var Q=[
+["Welke versie van mij heb je eigenlijk het liefst?",["De lieve versie","De plagerige versie","De tunnelvisie-versie","Een gevaarlijke mix van alle drie"],["Aha. Dus tóch die zachte kant. Genoteerd 😌","Kijk nou. Mevrouw houdt blijkbaar van problemen 😂","U kiest vrijwillig voor tunnelvisie. Dapper.","Ah ja, gewoon alles willen. Typisch Sophie."]],
+["Wat is het eerste wat je waarschijnlijk doet als je me weer ziet?",["Meteen een knuffel geven","Eerst even streng kijken","Doen alsof er niks aan de hand is","Doen alsof je boos bent"],["Zie je wel. Grote mond, kleine knuffelkont ❤️","Dat strenge gezicht hou je maximaal twaalf seconden vol.","Ja hoor. Alsof jij dat kan 😂","Hahaha, ‘doen alsof’ zegt eigenlijk al genoeg."]],
+["Wat werkt het snelst als ik jou weer aan het lachen wil krijgen?",["Een slechte grap","Iets oprecht liefs zeggen","Dat ik je expres een beetje plaag","Gewoon even naast je zitten"],["Pijnlijk dat mijn slechte humor dus gewoon werkt.","En dan straks weer zeggen dat ik niet lief ben hè.","Kijk. U kiest dus vrijwillig voor plagen. Bewijsstuk A.","Kijk haar ineens emotioneel volwassen doen 😌"]],
+["Als ik zeg: ‘Ik heb iets bedacht’, wat denk jij dan als eerste?",["Dit wordt leuk","Oh god, wat nu weer?","Ik vertrouw dit totaal niet","Waar moet ik heen en wat moet ik aan?"],["Veel te veel vertrouwen. Echt onverantwoord.","Eerlijk. Dit is waarschijnlijk de gezondste reactie.","Terecht, maar toch klik je altijd mee 👀","Hahaha prioriteiten zijn weer duidelijk."]],
+["Wat zou jij het liefst spontaan samen doen?",["Een nachtje ergens aan zee","Een onbekende stad in","Eten, wijn en nul planning","Gewoon samen ergens verdwijnen zonder plan"],["Romantisch hoor. Wie bent u en wat heeft u met Sophie gedaan?","Ja, zodat we samen drie uur verkeerd lopen zeker.","Ah kijk. Bougie mevrouw is weer terug 🍷","Heel schattig. Wel eerst je oplader meenemen."]],
+["Welke Kwin krijgt u vandaag?",["De lieve Kwin","De iets te enthousiaste Kwin","De Kwin die beter op zijn woorden moet letten 😂","Mijn lievelingsmens die soms nog wat training nodig heeft ❤️"],["Kijk, deze versie mag dus blijven. Duidelijk.","‘Iets te enthousiast’ is wel heel netjes geformuleerd 😂","Fair. Deze neem ik gewoon serieus.","Training? Prima. Maar wel met pauzes en snacks."]],
+["Laatste: maak deze zin af — ‘Eén ding dat ik je eigenlijk nog wil zeggen is…’",null,null]
+];
+var A=["","","","","","",""],i=0,photo=0,secret=0,screen="intro";
+var stage=document.getElementById("stage"),toast=document.getElementById("toast");
+function esc(s){return String(s).replace(/[&<>"']/g,function(m){return({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"})[m]})}
+function say(s){toast.textContent=s;toast.hidden=false;clearTimeout(say.t);say.t=setTimeout(function(){toast.hidden=true},1200)}
+function burst(x,y){var c=["❤","♡","✦","😂","😌","👀"];x=x||innerWidth/2;y=y||innerHeight/2;c.forEach(function(ch,n){var e=document.createElement("span");e.className="float";e.textContent=ch;e.style.left=x+"px";e.style.top=y+"px";e.style.setProperty("--x",Math.cos(n)*72+"px");e.style.setProperty("--y",(Math.sin(n)*72-46)+"px");document.body.appendChild(e);setTimeout(function(){e.remove()},1050)})}
+function mood(){var n=A.filter(Boolean).length;return n<=1?"boosig maar onderzoekbaar":n<=3?"verdacht aan het ontdooien":n<=5?"eigenlijk alweer schattig":"officieel niet meer boosig"}
+function shareSite(){var text="Sophie is boosig 😌❤️\\nOpen deze even, toch?\\n"+location.href;location.href="https://wa.me/?text="+encodeURIComponent(text)}
+function intro(){screen="intro";stage.innerHTML='<article class="card enter"><div class="collage" id="collage"><img class="photo a" src="'+P[0]+'" alt="Sophie"><img class="photo b" src="'+P[1]+'" alt="Sophie"><span class="sticker s1">boosig-meter™</span><span class="sticker s2">toch? 😌</span></div><span class="kicker">zeer serieus mini-onderzoek</span><h1>Sophie is<br><em>boosig.</em></h1><p class="lead">We hebben gepraat. Alles is oké. Dus uiteraard heb ik er een volledig onnodige interactieve website van gemaakt. Joh.</p><div class="actions"><button class="primary" id="start">Oké dan, kom maar door →</button><button class="secondary" id="shareSite">Stuur deze site via WhatsApp ↗</button></div><p class="micro">7 vragen • nul therapie • wel gezellig. Overdenken is verboden, mevrouw.</p></article>';
+document.getElementById("start").onclick=function(){screen="quiz";render()};document.getElementById("shareSite").onclick=shareSite;
+var c=document.getElementById("collage");c.onpointermove=function(e){var r=c.getBoundingClientRect(),rx=((e.clientY-r.top)/r.height-.5)*-7,ry=((e.clientX-r.left)/r.width-.5)*7;c.style.transform="rotateX("+rx+"deg) rotateY("+ry+"deg)"};c.onpointerleave=function(){c.style.transform=""}}
+function render(){var q=Q[i],pct=Math.round((i+1)/7*100),body="";
+if(q[1]){body='<div class="options">'+q[1].map(function(o,n){return '<button class="option '+(A[i]===o?'sel':'')+'" data-n="'+n+'"><span class="key">'+String.fromCharCode(65+n)+'</span><span>'+esc(o)+'</span><span class="tick">✓</span></button>'}).join("")+'</div>'}
+else{body='<textarea id="free" placeholder="Kom maar door. Ik doe alsof ik niet nieuwsgierig ben 😉">'+esc(A[i])+'</textarea>'}
+stage.innerHTML='<article class="card enter" id="card"><div class="progressrow"><span>'+(i+1)+'/7</span><div class="track"><div class="fill" style="width:'+pct+'%"></div></div><span>'+pct+'%</span></div><div class="qtop"><button class="thumbbtn" id="thumb"><img class="thumb" src="'+P[photo]+'" alt="Sophie"><i>↻</i></button><div class="vibe"><b>vraag '+(i+1)+'</b>huidige vibe: '+mood()+'<small>tik op de foto, joh</small></div></div><h2>'+q[0]+'</h2>'+body+'<div class="nav"><button class="secondary" id="back">← terug</button><button class="primary" id="next">'+(i===6?'toon het dossier':'volgende joh →')+'</button></div><button class="objection" id="obj">ik wil bezwaar maken</button></article>';
+document.getElementById("thumb").onclick=function(){photo=1-photo;say("andere Sophie unlocked ✨");render()};
+Array.from(document.querySelectorAll(".option")).forEach(function(b){b.onclick=function(e){var n=+b.dataset.n;A[i]=q[1][n];say(q[2][n]);burst(e.clientX,e.clientY);render()}});
+var free=document.getElementById("free");if(free)free.oninput=function(){A[i]=free.value};
+document.getElementById("back").onclick=function(){if(i===0)intro();else{i--;photo=1-photo;render()}};
+document.getElementById("next").onclick=function(){var free=document.getElementById("free");if(free)A[i]=free.value.trim();if(!A[i]){document.getElementById("card").classList.add("shake");say("Eerst iets kiezen, mevrouw 😌");setTimeout(function(){var c=document.getElementById("card");if(c)c.classList.remove("shake")},430);return}if(i===6){burst();done()}else{i++;photo=1-photo;render()}};
+document.getElementById("obj").onclick=function(){var x=["Bezwaar afgewezen. Toch? 😂","Uw advocaat belt later terug.","Sterk bezwaar. Niks mee gedaan.","JOL. Volgende vraag joh."];say(x[Math.floor(Math.random()*x.length)])}}
+function answers(){return "Sophie is boosig 😂❤️\\n\\n"+Q.map(function(q,n){return (n+1)+". "+q[0]+"\\n"+(A[n]||"—")}).join("\\n\\n")}
+function done(){screen="done";stage.innerHTML='<article class="final enter"><span class="kicker">dossier gesloten</span><h2>Sophie heeft<br>gesproken.</h2><p>Conclusie: mevrouw is <strong>'+mood()+'</strong>. Kwin krijgt voorwaardelijk toegang tot de rest van de dag. Toch.</p><div class="photos"><img src="'+P[0]+'" alt="Sophie"><img src="'+P[1]+'" alt="Sophie"></div><div class="summary">'+Q.map(function(q,n){return '<div class="item"><b>'+(n+1)+'. '+q[0]+'</b><span>'+esc(A[n]||"—")+'</span></div>'}).join("")+'</div><button class="darkbtn" id="shareA">deel / kopieer mijn antwoorden</button><button class="wabtn" id="shareS">stuur de site via WhatsApp</button><button class="reset" id="reset">nog een keer joh</button></article>';
+document.getElementById("shareA").onclick=async function(){var text=answers();try{if(navigator.share)await navigator.share({title:"Sophie is boosig",text:text});else{await navigator.clipboard.writeText(text);say("Gekopieerd joh ✨")}}catch(e){}};
+document.getElementById("shareS").onclick=shareSite;document.getElementById("reset").onclick=function(){A=["","","","","","",""];i=0;photo=0;intro()}}
+document.getElementById("home").onclick=intro;document.getElementById("jol").onclick=function(e){secret++;say(secret<4?"JOL. Geen noodknop nodig 😂":"OKÉ JOH, geheime knop gevonden 😭");burst(e.clientX,e.clientY)};
+intro();
+})();
+</script>
+</body>
+</html>
